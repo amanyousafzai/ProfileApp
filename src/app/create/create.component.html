@@ -1,0 +1,31 @@
+<!-- <dashboard></dashboard> -->
+
+<h1 class="mainHeadingStyle " > Add Your Team</h1><br>
+
+<form [formGroup]="form" (ngSubmit)="submitForm()" >
+    <div class="row" >
+        <div class="col-md-6">
+            <input class="inputFields " formControlName="id"        type="number" id="id"     placeholder="Id"             autocomplete="off">
+            <input class="inputFields " formControlName="email"     type="email"  id="email"  placeholder="Email"          autocomplete="off">
+            <input class="inputFields " formControlName ="address"  type="text"  id="address" placeholder="Address"        autocomplete="off">
+           
+        </div>
+            <div class="col-md-6">
+            <input class="inputFields"   formControlName="name"         type="text"     id="name"         placeholder="Name"           autocomplete="off">
+            <input class="inputFields "  formControlName="phone"        type="number"   id="phone"        placeholder="Phone No."      autocomplete="off">
+            <input class="inputFields "  formControlName="password"     type="password" id="password"   placeholder="Password"       autocomplete="off">
+        
+        </div>
+
+    </div>
+        <div class="row" style="display: flex; justify-content:center;margin-right: 7%;">
+            <div class="col-md-12" >
+                <button type="submit" class=" btnADD">ADD</button>
+            </div>
+        </div>
+
+        <div class="toaster" *ngIf="showtoaster">
+            <span class="message">{{ message }}</span>
+          </div>
+
+</form>

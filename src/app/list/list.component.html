@@ -1,0 +1,75 @@
+ <dashboard></dashboard>
+ <div class="welcomeCard" >
+  <h1 class="namestyles">Good Morning, {{showName}}!</h1>
+</div>
+
+ <div style="margin-left: 20rem; margin-top: 2rem;">
+<div style="display: flex; justify-content:left;padding-left: 20px;">
+<input class="seachInput" [formControl]="search" type="text" placeholder="Seach Name">
+<input class="seachInput" [formControl]="universalSearch" type="text" placeholder="Universal Seach">
+</div> 
+ <div>
+  <button class="addRecord" (click)="AddRecord()" > Add</button>
+  <button class="addRecord dltRecord" (click)="DeleteList()" > Delete</button>
+  <button class="addRecord dltRecord" (click)="Chart()" > Chart</button>
+ </div>
+ <table style="width:58%; ">
+    <tr>
+        <th >Id</th>
+        <th >Name</th>
+        <th >Email</th>
+        <th >Phone No.</th>
+        <th >Address</th>
+        <th>Delete/Edit</th>
+    </tr>
+
+    <!-- | paginate : {
+      itemsPerPage: tableSize,
+      currentPage: page,
+      totalItems: count
+    }; -->
+
+    <tr  *ngFor="let profile of filterProfiles;
+      let i = index" >
+      <td>{{profile?.id}}</td>
+      <td>{{profile?.name}}</td>
+      <td>{{profile?.email}}</td>
+      <td>{{profile?.phone}}</td>
+      <td>{{profile?.address}}</td>
+      <td> 
+        <span  class="cursorpointer deleterecord" (click)="DeleteRecord(i)">
+          <a class="deleteandUpdateButtonstyles"  >D </a> </span>
+         <span class="cursorpointer Editrecord" ><span class="bold"> | </span>
+          <a class="deleteandUpdateButtonstyles" routerLink="/update" (click)="EditRecord(i)"> E</a>
+          
+        </span>
+        <span class="cursorpointer Editrecord" > <span class="bold"> | </span>
+          <a class="deleteandUpdateButtonstyles"  (click)="ViewRecord(i)"> V</a></span>
+      </td>
+     
+      
+    </tr>
+    <!-- [routerLink]="['/list', i+1]" -->
+    <div class="viewDetailModal" *ngIf="showViewDetailModal"> 
+      <div style="float: right; cursor: pointer; font-size: 50px;" (click)="CloseModal()" >
+      <img class="crossimg" src="assets/icons/crosscancel.jpg" alt="crosscancel"> 
+    </div>
+      <viewdetail></viewdetail>
+
+
+    </div>
+
+    <div class="chart-container viewDetailModal" *ngIf="showChartModal">
+      <div style="float: right; cursor: pointer; font-size: 50px;" (click)="CloseModal()" >
+        <img class="crossimg" src="assets/icons/crosscancel.jpg" alt="crosscancel"> 
+      </div>
+      <charts-library></charts-library>
+    </div>
+
+    
+    
+  </table>
+  <div class="toaster" *ngIf="showtoaster">
+    <span class="message">{{ message }}</span>
+  </div>
+</div>
