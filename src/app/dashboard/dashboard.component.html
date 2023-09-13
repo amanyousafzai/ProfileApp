@@ -1,0 +1,34 @@
+
+
+<!-- <listProfiles></listProfiles> -->
+
+<!-- Sidebar -->
+<!-- HTML -->
+<input type="checkbox" id="openSidebarMenu" class="checkboxstles" checked="true">
+<label for="openSidebarMenu" class="sidebarIcontoggle">
+
+    <div class="spinner top"></div>
+    <div class="spinner middle"></div>
+    <div class="spinner bottom"></div>
+
+
+</label>
+<div class="sidebar" id="dashboardSideBar">
+    
+    <div class="menuItems" routerLink="/list" (click)="showTeam()"> Show team</div>
+   
+    <div class="menuItems" routerLink="/invitemember">Invite Member</div>
+    <div class="menuItems" >About Our Team</div>
+    <div class="menuItems" routerLink="/missionstatement">Mission Statement</div>
+    <div class="menuItems" routerLink="/careers">Careers</div>
+    <div class="menuItems" routerLink="/login">Logout</div>
+    
+</div>
+    
+    <div class="body-text" *ngIf="showteam">
+        
+    </div>
+    
+     
+    
+    

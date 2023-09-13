@@ -1,0 +1,85 @@
+.dashboard{
+    color: brown;
+}
+/* CSS */
+.sidebarIcontoggle{
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 29px;
+        left: 8px;
+        cursor: pointer;
+}
+.spinner{
+    background-color: #cd7700;
+    height: 3px;
+    transition: all 0.3s;
+}
+.spinner.middle, .spinner.bottom{
+    margin-top: 3px;
+}
+
+#openSidebarMenu:checked ~ .sidebarIcontoggle > .spinner.middle {
+    opacity: 0;
+}
+#openSidebarMenu:checked ~ .sidebarIcontoggle > .spinner.top {
+    transform: rotate(135deg);
+    margin-top: 8px;
+    position: relative;
+    left: 220px;
+    
+}
+#openSidebarMenu:checked ~ .sidebarIcontoggle > .spinner.bottom {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+    position: relative;
+    left: 220px;
+}
+
+
+    #dashboardSideBar {
+    display: flex;
+    flex-direction: column;  
+    margin-top: 2.5%;
+    height: 90%;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 30px;
+    background-color: blanchedalmond;
+    transform: translateX(-250px);
+    transition:transform 250ms ease-in-out;
+}
+// open close side bar
+    #openSidebarMenu:checked ~ #dashboardSideBar{
+        transform: translateX(0px);
+    transition:transform 250ms ease-in-out;
+
+    }
+    .checkboxstles{
+        opacity: 0;
+    }
+    
+    .sidebar div {
+    padding: 8px;
+    font-size: 24px;
+    display: block;
+    }
+    
+    .body-text {
+    margin-left: 150px;
+    font-size: 18px;
+    }
+.menuItems{
+    cursor: pointer;
+    color: White;
+    padding: 35px;
+    margin: 10px;
+    background-color: #cd7700;
+    border-radius: 10px;
+ }
+
+.menuItems:hover{
+    font-weight: 600;
+}

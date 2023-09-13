@@ -1,0 +1,32 @@
+
+<div class="colorBar mt-1">
+    <div class="colorlines purple" style="width: 53px;"></div>
+    <div class="colorlines orange" style="width: 130px;"></div>
+    <div class="colorlines blue" style="width: 79px;"></div>
+    <div class="colorlines green" style="width: 26px;"></div>
+</div>
+
+
+<nav  class="navbarheading" >
+    <div class="navbardesign" style="display: flex; justify-content:space-around; float: left;">
+        <ul class="mt-2">
+          
+              <li class="linavBar "><span class="logostyle"> Logo</span></li>
+        </ul>
+        
+    </div>
+    <div class="navbardesign" style="display: flex; justify-content:space-around; float: right;">
+    <ul class="mt-2">
+        <!-- <li routerLinkActive ="active current" class="linavBar"><a class="tabstyles" routerLink="/create" (click)="ADDTeamMember()">Create</a> </li>
+        <li routerLinkActive ="active current" class="linavBar"><a class="tabstyles" routerLink="/list"  (click)="ListTeam()" >List</a></li> -->
+       
+        <li  *ngIf="!islogin" routerLinkActive ="active current" class="linavBar "><a class="tabstyles" routerLink="/login"  (click)="Login()" >login</a></li>
+        <li  *ngIf="!islogin" routerLinkActive ="active current" class="linavBar "><a class="tabstyles" routerLink="/create"  (click)="register()" >SignUp</a></li>
+        
+        <li  *ngIf="islogin" routerLinkActive ="active current" class="linavBar "><a class="tabstyles" routerLink="/login"  (click)="Logout()" >logout</a></li>
+       
+    </ul>
+</div>
+</nav>
+
+

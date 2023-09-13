@@ -1,0 +1,133 @@
+// Now making the profile menu through tables
+
+table, th, td {
+    border:1px solid blanchedalmond;
+    text-align: center;
+  }
+  th{
+    background-color: blanchedalmond;
+  }
+   .addmore{
+    border:none
+   }
+   .darkbrown{
+    border:1px solid blanchedalmond;
+    
+   }
+  .addRecord{
+    font-size: large;
+    color: white;
+    background-color: #cd7700;
+    width: 70px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    margin-top: 2%;
+    margin-right:1%;
+
+    
+  }
+  .dltRecord{
+
+  }
+
+  .addRecord:hover{
+    font-weight: 600;
+  }
+
+  
+
+  .seachInput{
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-color: blanchedalmond;
+  }
+  .cursorpointer{
+    cursor: pointer;
+  }
+  .deleterecord:hover{
+    color: brown;
+    font-weight: 600;
+  }
+  .Editrecord:hover{
+    color: brown;
+    font-weight: 600;
+  }
+  .deleteandUpdateButtonstyles{
+    color: brown;
+    font-size: larger;
+    text-decoration: none;
+   
+  }
+
+  .bold{
+    color: brown;
+    font-weight: 600;
+  }
+
+  // toaster styles
+
+.toaster {
+  width: 300px;
+  height: 50px;
+  float: right;
+  background-color:blanchedalmond;
+  color: brown;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.message {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.viewDetailModal{
+  position: absolute;
+    width: 435px;
+    height: 348px;
+    z-index: 11;
+    background-color: blanchedalmond;
+    color: #cd7700;
+    top: 42%;
+    left: 67.5%;
+    border-radius: 10px;
+  
+
+}
+
+.crossimg{
+  width: 25px;
+  height: 25px;
+  padding: 10px 10px 0px 0px;
+}
+
+.welcomeCard {
+background: url('../../assets/images/Screenshot\ 2023-09-12\ 135357.png');
+background-repeat: no-repeat;
+background-size: cover;
+display: flex ;
+margin: auto;
+width:65%; 
+height: 105px;
+background-color: antiquewhite;
+padding: 10px 10px;
+border-radius: 10px;
+
+
+}
+.namestyles{
+  font-size: 24px;
+  margin-top: 0.5%;
+  color: #fff;
+  font-weight: bold;
+
+}
